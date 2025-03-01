@@ -5,11 +5,20 @@ function App() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
   const [showResults,setShowResults] = useState(false);
+  const [cache,setCache] = useState({});
+
   const fetchData = async () => {
+    // cache returned
+    if(cache[input]){
+      console.log("Cache: " + input);
+      setResults(cache[input]);
+      return;
+    }
     console.log("API",input);
     const data = await fetch("https://dummyjson.com/recipes/search?q="+input);
     const json = await data.json();
     setResults(json.recipes);
+    setCache((prev)=>({...prev,[input]:json?.recipes}))
   };
 
   useEffect(() => {
