@@ -1,15 +1,36 @@
-# React + Vite
+# Autocomplete Search Bar in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Details
 
-Currently, two official plugins are available:
+### Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Autocomplete Functionality:**
+   - As users type in the search bar, show all related words or suggestions.
+   - Suggestions dynamically update based on the input.
 
-## Expanding the ESLint configuration
+2. **Optimized Code & Caching:**
+   - Implement optimized logic to reduce unnecessary re-renders and API calls.
+   - Use caching (e.g., with a simple JavaScript object or localStorage) to store previous search results and improve performance.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Implementation Outline:
 
+1. **State Management:**
+   - Use React state to track user input and filtered suggestions.
+
+2. **Debouncing for Performance:**
+   - Add a debounce function to limit API requests and avoid excessive calls.
+
+3. **Caching Strategy:**
+   - Store previously fetched results in a cache.
+   - Check the cache before making new requests.
+
+4. **UI & Styling:**
+   - Create a dropdown list to display matching suggestions.
+   - Highlight the active suggestion as the user navigates with the keyboard.
+
+Would you like me to draft the React code for this or refine any details? Let me know! 🚀
+
+---
+### Screenshot ###
 
 ![Screenshot of my project](https://github.com/siddharth6164/Autocomplete-Search-Bar/blob/main/public/Autocomplete-search-bar.png)
