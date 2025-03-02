@@ -28,7 +28,6 @@
    - Create a dropdown list to display matching suggestions.
    - Highlight the active suggestion as the user navigates with the keyboard.
 
-Would you like me to draft the React code for this or refine any details? Let me know! 🚀
 
 ---
 ### Screenshot ###
